@@ -20,6 +20,11 @@ const userSchema = mongoose.Schema({
         required: true,
         minLength: 8
     },
+    avatar: {
+        type: String,
+        default:
+          "https://i.imgur.com/nbLF6a0.png",
+    },
     createdAt: {
         type: Date,
         default: Date.now()

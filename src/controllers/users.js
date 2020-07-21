@@ -21,3 +21,12 @@ exports.getUsers = asyncHandler(async (req, res, next) => {
 
     return res.json({ usersList });
 });
+
+exports.getUser = asyncHandler(async (req, res) => {
+    const { avatar, username, email, _id } = req.user;
+
+    res.status(200).json({
+      success: true,
+      data: { avatar, username, email, _id },
+    });
+});
