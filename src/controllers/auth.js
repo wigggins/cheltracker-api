@@ -3,7 +3,6 @@ const PlayerStats = require('../models/PlayerStats');
 const asyncHandler = require("../middlewares/async");
 
 exports.login = asyncHandler(async (req, res, next) => {
-
     const { email, password } = req.body;
     if(!email || !password) {
         res.status(400).send({ message: 'Please provide email and password' });
@@ -32,7 +31,6 @@ exports.login = asyncHandler(async (req, res, next) => {
 
 
 exports.signup = asyncHandler(async (req, res) => {
-
     const user = await User.create({
         username: req.body.username,
         email: req.body.email,

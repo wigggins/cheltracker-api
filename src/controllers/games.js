@@ -1,7 +1,6 @@
 const asyncHandler = require("../middlewares/async");
 const Game = require('../models/Game');
 const PlayerStats = require('../models/PlayerStats');
-const User = require("../models/User");
 const createAvg = require('../utils/createAvg');
 const processPeriods = require('../utils/processPeriods');
 
