@@ -1,7 +1,5 @@
 const processPeriods = (periods) => {
-    const newArray = [ ...periods ];
-
-    return newArray.map((period, i) => {
+    return [ ...periods ].map((period, i) => {
         if(i === 0) {
             return { ... period };
         }
