@@ -51,7 +51,8 @@ exports.createGame = asyncHandler(async (req, res, next) => {
             }
         },
         shootout: req.body.shootout,
-        winner: home.periods[home.periods.length - 1].goals > visitor.periods[home.periods.length - 1].goals ? home.user : visitor.user
+        winner: home.periods[home.periods.length - 1].goals > visitor.periods[home.periods.length - 1].goals ? home.user : visitor.user,
+        createdAt: req.body.createdAt
     });
 
     const savedGame = await game.save();

@@ -4,6 +4,7 @@ const playerStatsSchema = mongoose.Schema({
     userId: String,
     username: String,
     gamesPlayed: Number,
+    gamesWon: Number,
     totalGoals: Number,
     totalShots: Number,
     totalHits: Number,
